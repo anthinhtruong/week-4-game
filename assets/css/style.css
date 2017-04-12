@@ -1,0 +1,71 @@
+
+body{
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #dbcfe9;
+	font-family: 'Raleway', sans-serif;
+
+}
+#game-name{
+	font-family: 'Press Start 2P', sans-serif;
+	font-size: 30px;
+	margin-top: 0px;
+	color:#fff;
+	background: #ea6682;
+}
+#rules p{
+	font-size: 15px;
+	line-height: 20px;
+}
+#score{
+	background: #ea6682;
+	height:200px;
+}
+#score h4 {
+	line-height: 30px;
+	color:#fff;
+	font-weight: 500;
+}
+#random-number{
+	height:150px;
+	padding:10px;
+	font-size: 100px;
+} 
+#score h6{
+	line-height: 30px;
+	color:#fff;
+	font-weight: 500;
+}
+.box{
+	background: #fff;
+	padding: 10px;
+	margin:10px 0px 0px 0px;
+
+}
+#gems-row{
+	background-color: #4d4d4d;
+	padding:10px;
+	margin: 0px;
+}
+.gems-button{
+	text-align: center;
+	
+	
+}
+.gems-button img{
+	width:100px;
+	height:100px;
+
+	
+}
+#total-score-box{
+	background: #fce221;
+	height:100px;
+}
+#total-score{
+	height:150px;
+	padding:10px;
+	font-size: 100px;
+
+}

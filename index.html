@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 4 Game</title>
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Raleway:400,500" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel = "stylesheet" href = "assets/css/reset.css">
+	<link rel = "stylesheet" href = "assets/css/style.css">
+	
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+
+
+<body>
+
+
+	<div class = "box" id = "game-name">
+		<h1> The Gems Game </h1>	
+
+	</div>	
+
+
+
+
+
+	<div class = "box" id = "rules">
+			<p>
+				1. Computer Choose 1 RANDOM number from 19 - 120. <br>
+				2. User will ADD numbers using the 4 GEMS.<br>
+				3. User sum of GEMS numbers will display at TOTAL SCORE.<br>
+				4. The SUM of user CANNOT be HIGHER than the RANDOM number.<br>
+				4. If User sum = RANDOM number  <br>
+					a. User Wins<br>
+					b. Add 1 to WINS SCORE <br>
+					c. Reset RANDOM NUMBER<br>
+					d. Reset TOTAL SCORE<br>
+				6. If User summ != RANDOM number <br>
+					a. User Looses<br>
+					b. Add 1 to LOSSES SCORE <br>
+					c. Reset RANDOM NUMBER<br>
+					d. Reset TOTAL SCORE<br>
+
+			</p>
+	</div>
+	
+	
+	
+
+
+	<div class="row box" id = "score">
+
+  		<div class="col-xs-6 col-md-6">
+				<div>
+					<h4> Your Number is:</h4>
+					<div>
+						<h1 id = "random-number">
+							
+						</h1>
+					</div>
+				</div>
+  		</div>
+
+  		<div class="col-xs-6 col-md-6">
+  				<div id = "wins-losses">
+  					<h6 id ="wins"> Wins: 0 </h6>
+  					<h6 id = "losses"> Losses: 0 </h6>
+  				</div>
+  		</div>
+
+  	</div>
+
+
+
+
+
+	<div class="row" id = "gems-row">
+
+  		<div class="col-xs-3 col-md-3">
+    		<div class = "gems-button">
+     			<img src="assets/images/Gems-blue.png" alt="Blue Gem">
+    		</div>
+  		</div>
+
+
+  		<div class="col-xs-3 col-md-3">
+    		<div class = "gems-button">
+     			<img src="assets/images/Gems-green.png" alt="Green Gem">
+    		</div>
+  		</div>
+
+
+  		<div class="col-xs-3 col-md-3">
+    		<div class = "gems-button">
+     			<img src="assets/images/Gems-pink.png" alt="Pink Gem">
+    		</div>
+  		</div>
+
+
+  		<div class="col-xs-3 col-md-3">
+    		<div class = "gems-button">
+     			<img src="assets/images/Gems-yellow.png" alt="Yellow Gem">
+    		</div>
+  		</div>
+
+  
+	</div>
+
+
+
+
+
+	<div class = "box" id = "total-score-box">
+			<h4>Your Total Score Is :</h4>
+			<h1 id = "total-score">
+				
+			</h1>
+	</div>
+
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+			var value = [ 1, 5, 10, 20];
+			var randomNumber = randomNumber();
+			var wins ;
+			var looses ;
+			var totalScore ;
+
+
+				function startGame(){
+					var randomNumber = [] ;
+					var wins = 0 ;
+					var looses = 0;
+					var totalScore = 0 ;
+				};
+
+				// Give "Your Number is" a random number from 19 - 120
+				function randomNumber(){
+					return Math.floor(Math.random() * 102) + 19;
+					
+				};
+				// Add the random number to "Your Number is" HTML
+				$("#random-number").append(randomNumber);
+
+				// Set value for gems randomly
+				function gemsValue(){
+					return value[Math.floor(Math.random() * value.length)];
+
+				}
+
+				
+				var userGuessed = [];
+
+				// When Gems "clicked" return random number (gemsValue)
+				$(".gems-button").on("click" , function(){
+						 $("#total-score").append(gemsValue($(this)));
+						
+
+
+				});
+
+
+				
+
+				
+				
+				
+	});
+	
+</script>
+
+</body>
+</html>
