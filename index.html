@@ -1,175 +1,364 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Week 4 Game</title>
-	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Raleway:400,500" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel = "stylesheet" href = "assets/css/reset.css">
-	<link rel = "stylesheet" href = "assets/css/style.css">
-	
-	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>Week 4 Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Raleway:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "assets/css/reset.css">
+    <link rel = "stylesheet" href = "assets/css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 </head>
 
 
 <body>
 
 
-	<div class = "box" id = "game-name">
-		<h1> The Gems Game </h1>	
+<div class = "box" id = "game-name">
+    <h1> The Gems Game </h1>
 
-	</div>	
-
-
-
-
-
-	<div class = "box" id = "rules">
-			<p>
-				1. Computer Choose 1 RANDOM number from 19 - 120. <br>
-				2. User will ADD numbers using the 4 GEMS.<br>
-				3. User sum of GEMS numbers will display at TOTAL SCORE.<br>
-				4. The SUM of user CANNOT be HIGHER than the RANDOM number.<br>
-				4. If User sum = RANDOM number  <br>
-					a. User Wins<br>
-					b. Add 1 to WINS SCORE <br>
-					c. Reset RANDOM NUMBER<br>
-					d. Reset TOTAL SCORE<br>
-				6. If User summ != RANDOM number <br>
-					a. User Looses<br>
-					b. Add 1 to LOSSES SCORE <br>
-					c. Reset RANDOM NUMBER<br>
-					d. Reset TOTAL SCORE<br>
-
-			</p>
-	</div>
-	
-	
-	
-
-
-	<div class="row box" id = "score">
-
-  		<div class="col-xs-6 col-md-6">
-				<div>
-					<h4> Your Number is:</h4>
-					<div>
-						<h1 id = "random-number">
-							
-						</h1>
-					</div>
-				</div>
-  		</div>
-
-  		<div class="col-xs-6 col-md-6">
-  				<div id = "wins-losses">
-  					<h6 id ="wins"> Wins: 0 </h6>
-  					<h6 id = "losses"> Losses: 0 </h6>
-  				</div>
-  		</div>
-
-  	</div>
+</div>
 
 
 
 
 
-	<div class="row" id = "gems-row">
+<div class = "box" id = "rules">
+    <p>
+        1. Computer Choose 1 RANDOM number from 19 - 120. <br>
+        2. User will ADD numbers using the 4 GEMS.<br>
+        3. User sum of GEMS numbers will display at TOTAL SCORE.<br>
+        4. The SUM of user CANNOT be HIGHER than the RANDOM number.<br>
+        4. If User sum = RANDOM number  <br>
+        a. User Wins<br>
+        b. Add 1 to WINS SCORE <br>
+        c. Reset RANDOM NUMBER<br>
+        d. Reset TOTAL SCORE<br>
+        6. If User summ != RANDOM number <br>
+        a. User Looses<br>
+        b. Add 1 to LOSSES SCORE <br>
+        c. Reset RANDOM NUMBER<br>
+        d. Reset TOTAL SCORE<br>
 
-  		<div class="col-xs-3 col-md-3">
-    		<div class = "gems-button">
-     			<img src="assets/images/Gems-blue.png" alt="Blue Gem">
-    		</div>
-  		</div>
-
-
-  		<div class="col-xs-3 col-md-3">
-    		<div class = "gems-button">
-     			<img src="assets/images/Gems-green.png" alt="Green Gem">
-    		</div>
-  		</div>
-
-
-  		<div class="col-xs-3 col-md-3">
-    		<div class = "gems-button">
-     			<img src="assets/images/Gems-pink.png" alt="Pink Gem">
-    		</div>
-  		</div>
-
-
-  		<div class="col-xs-3 col-md-3">
-    		<div class = "gems-button">
-     			<img src="assets/images/Gems-yellow.png" alt="Yellow Gem">
-    		</div>
-  		</div>
-
-  
-	</div>
+    </p>
+</div>
 
 
 
 
 
-	<div class = "box" id = "total-score-box">
-			<h4>Your Total Score Is :</h4>
-			<h1 id = "total-score">
-				
-			</h1>
-	</div>
+<div class="row box" id = "score">
+
+    <div class="col-xs-6 col-md-6">
+        <div>
+            <h4> Your Number is:</h4>
+            <div>
+                <h1 id = "random-number">
+
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-6 col-md-6">
+        <div id = "wins-losses">
+            <h6 id ="wins"> Wins: 0 </h6>
+            <h6 id = "losses"> Losses: 0 </h6>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<div class="row" id = "gems-row">
+
+    <div class="col-xs-6 col-md-3">
+        <div class = "gems-button" id = "bluegem">
+            <img src="assets/images/Gems-blue.png" alt="Blue Gem">
+        </div>
+    </div>
+
+
+    <div class="col-xs-6 col-md-3">
+        <div class = "gems-button" id = "greengem">
+            <img src="assets/images/Gems-green.png" alt="Green Gem">
+        </div>
+    </div>
+
+
+    <div class="col-xs-6 col-md-3">
+        <div class = "gems-button" id = "pinkgem">
+            <img src="assets/images/Gems-pink.png" alt="Pink Gem">
+        </div>
+    </div>
+
+
+    <div class="col-xs-6 col-md-3">
+        <div class = "gems-button" id ="yellowgem">
+            <img src="assets/images/Gems-yellow.png" alt="Yellow Gem">
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+<div class = "box" id = "total-score-box">
+    <h4>Your Total Score Is :</h4>
+    <h1 id = "total-score">
+
+    </h1>
+</div>
 
 
 
 
 
 <script type="text/javascript">
-	$(document).ready(function(){
 
-			var value = [ 1, 5, 10, 20];
-			var randomNumber = randomNumber();
-			var wins ;
-			var looses ;
-			var totalScore ;
+    $(document).ready(function(){
 
-
-				function startGame(){
-					var randomNumber = [] ;
-					var wins = 0 ;
-					var looses = 0;
-					var totalScore = 0 ;
-				};
-
-				// Give "Your Number is" a random number from 19 - 120
-				function randomNumber(){
-					return Math.floor(Math.random() * 102) + 19;
-					
-				};
-				// Add the random number to "Your Number is" HTML
-				$("#random-number").append(randomNumber);
-
-				// Set value for gems randomly
-				function gemsValue(){
-					return value[Math.floor(Math.random() * value.length)];
-
-				}
-
-				
-				var userGuessed = [];
-
-				// When Gems "clicked" return random number (gemsValue)
-				$(".gems-button").on("click" , function(){
-						 $("#total-score").append(gemsValue($(this)));
-						
+        var value = [ 1,2,3,4,5,6,7,8,9,10,11,12];
+        var randomNumber = randomNumberGenerator();
+        var wins = 0;
+        var losses = 0;
+        var $totalScore = $('#total-score');
+        var currScore;
 
 
-				});
+        // Give "Your Number is" a random number from 19 - 120
+        function randomNumberGenerator(){
+            return Math.floor(Math.random() * 102) + 19;
+
+        };
 
 
-				
 
-				
-				
-				
-	});
-	
+        function reset(){
+            // Need to RESET
+            //Total Score - DONE
+            $("#total-score").empty();
+            //Random Number - NOT DONE
+            randomNumber = randomNumberGenerator();
+            $("#random-number").html(randomNumber);
+            //Gems Values - - NOT DONE
+            value = [ 1,2,3,4,5,6,7,8,9,10,11,12];
+            greenVal = uniqueGemValue(value);
+            blueVal = uniqueGemValue(value);
+            pinkVal = uniqueGemValue(value);
+            yellowVal = uniqueGemValue(value);
+
+        };
+
+
+        // Add the random number to "Your Number is" HTML
+        $("#random-number").html(randomNumber);
+
+        // Set value for gems randomly
+        function uniqueGemValue(value){
+            var index = Math.floor(Math.random() * value.length);
+            var x = value[index];
+            value.splice(index,1);
+            return x;
+        }
+
+
+        //Assignment each gems a Value
+        //var greenVal = gemsValue();
+        //var blueVal = gemsValue();
+        //var pinkVal = gemsValue();
+        //var yellowVal = gemsValue();
+
+        var greenVal = uniqueGemValue(value);
+        var blueVal = uniqueGemValue(value);
+        var pinkVal = uniqueGemValue(value);
+        var yellowVal = uniqueGemValue(value);
+
+        console.log(greenVal);
+        console.log(blueVal);
+        console.log(pinkVal);
+        console.log(yellowVal);
+
+
+        // NOT WORKING!!!! WHYYYYY????
+        // function isGameOver() {
+
+        // 	if (randomNumber < greenVal+currScore ){
+        // 	  		alert('noooo');
+        // 	  		losses ++;
+        // 	  		$('#losses').html('Losses: ' + losses);
+        // 	  		console.log('Losses: ' + losses);
+        // 	  }
+        // 	  else if (randomNumber === greenVal+currScore){
+        // 	  		alert('yassss');
+        // 	  		wins ++;
+        // 	  		$('#wins').html('Wins: ' + wins);
+        // 	  		console.log('Wins: ' + wins);
+        // 	  }
+
+
+        // };
+
+
+        // When specific Gems button is  "clicked"
+        // return random number to approriate gems
+        // then add with other number
+
+
+        $("#greengem").on("click" , function(){
+
+            var $totalScore = $("#total-score");
+            var currScore = Number($totalScore.text());
+            $totalScore.text(greenVal+currScore);
+
+
+
+            //handle end game via a function
+            if (randomNumber < greenVal+currScore ){
+                alert('noooo');
+                losses ++;
+                $('#losses').html('Losses: ' + losses);
+                console.log('Losses: ' + losses);
+
+
+
+                reset();
+
+
+            }
+
+            else if (randomNumber === greenVal+currScore){
+                alert('yassss');
+                wins ++;
+                $('#wins').html('Wins: ' + wins);
+                console.log('Wins: ' + wins);
+
+                reset();
+
+            }
+
+
+
+
+
+
+
+        });
+
+
+
+        $("#bluegem").on("click" , function(){
+            var $totalScore = $("#total-score");
+            var currScore = Number($totalScore.text());
+            $totalScore.text(blueVal+currScore);
+
+
+            if (randomNumber < blueVal+currScore ){
+                alert('noooo');
+                losses ++;
+                $('#losses').html('Losses: ' + losses);
+                console.log('Losses: ' + losses);
+
+                reset();
+            }
+            else if (randomNumber === blueVal+currScore){
+                alert('yassss');
+                wins ++;
+                $('#wins').html('Wins: ' + wins);
+                console.log('Wins: ' + wins);
+
+                reset();
+            }
+
+
+
+
+        });
+
+
+
+        $("#pinkgem").on("click" , function(){
+            var $totalScore = $("#total-score")
+            var currScore = Number($totalScore.text());
+            $totalScore.text(pinkVal+currScore);
+
+
+            if (randomNumber < pinkVal+currScore ){
+                alert('noooo');
+                losses ++;
+                $('#losses').html('Losses: ' + losses);
+                console.log('Losses: ' + losses);
+
+                reset();
+            }
+            else if (randomNumber === pinkVal+currScore){
+                alert('yassss');
+                wins ++;
+                $('#wins').html('Wins: ' + wins);
+                console.log('Wins: ' + wins);
+
+                reset();
+            }
+
+        });
+
+
+
+        $("#yellowgem").on("click" , function(){
+            var $totalScore = $("#total-score")
+            var currScore = Number($totalScore.text());
+            $totalScore.text(yellowVal+currScore);
+
+
+            if (randomNumber < yellowVal+currScore ){
+                alert('noooo');
+                losses ++;
+                $('#losses').html('Losses: ' + losses);
+                console.log('Losses: ' + losses);
+
+                reset();
+            }
+            else if (randomNumber === yellowVal+currScore){
+                alert('yassss');
+                wins ++;
+                $('#wins').html('Wins: ' + wins);
+                console.log('Wins: ' + wins);
+
+                reset();
+            }
+
+        });
+
+
+
+        // var scoreSum = [];
+
+        // totalScore = 0;
+        // for (var i = 0; i < value.length; i++){
+        // 	totalScore += value[i]
+        // }
+
+        //$("#total-score").html($(totalScore));
+
+        //$("#total-score").append(yellow + pink);
+
+
+
+
+
+
+
+
+
+
+    });
+
 </script>
 
 </body>

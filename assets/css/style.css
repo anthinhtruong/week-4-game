@@ -28,6 +28,7 @@ body{
 	font-weight: 500;
 }
 #random-number{
+	color: #fff;
 	height:150px;
 	padding:10px;
 	font-size: 100px;
@@ -61,11 +62,20 @@ body{
 }
 #total-score-box{
 	background: #fce221;
-	height:100px;
+	height:200px;
 }
 #total-score{
-	height:150px;
+	height:200px;
 	padding:10px;
 	font-size: 100px;
 
+}
+
+@media only screen and (max-width: 700px){
+	body{
+		width: 400px;
+		background: #000;
+	}
+
+	
 }
